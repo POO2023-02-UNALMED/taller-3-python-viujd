@@ -39,3 +39,13 @@ class TV:
     def setControl (self, control):
         self._control=control
 
+    def turnOn (self, estado):
+        self._estado=True
+
+    def turnOff (self, estado):
+        self._estado=False
+
+    def getEstado(self):
+        return self._estado
+        
+
