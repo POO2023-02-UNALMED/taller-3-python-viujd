@@ -1,4 +1,5 @@
 class TV:
+    numTv=0
     def __init__(self, marca, estado):
         self._marca = marca
         self._canal = 1
