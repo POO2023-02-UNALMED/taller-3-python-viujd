@@ -7,7 +7,7 @@ class TV:
         self._estado = estado
         self._volumen = 1
         self._control = None
-        TV.numTV+=1
+        TV.numTv+=1
 
     def getMarca(self):
         return self._marca
