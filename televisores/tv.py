@@ -18,8 +18,9 @@ class TV:
     def getCanal(self):
         return self._canal
     
-    def setCanal(self, Canal):
-        self._canal=Canal
+    def setCanal(self, canal):
+        if (self._estado == True and canal <= 120 and canal >= 1 ):
+            self._canal = canal
 
     def getPrecio(self):
         return self._precio
@@ -30,14 +31,19 @@ class TV:
     def getVolumen (self):
         return self._volumen
     
-    def setVolumen (self, volumen):
-        self._volumen=volumen
+    def setVolumen(self, volumen):
+        if (self._estado == True and volumen <= 7 and volumen >= 0):
+            self._volumen = volumen
 
     def getControl (self):
         return self._control
     
     def setControl (self, control):
         self._control=control
+
+    @classmethod
+    def getNumTV(cls):
+        return cls._numTV
 
     def turnOn (self):
         self._estado=True
