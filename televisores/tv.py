@@ -7,7 +7,7 @@ class TV:
         self._estado = estado
         self._volumen = 1
         self._control = None
-        TV.numTV()
+        TV.numTV+=1
 
     def getMarca(self):
         return self._marca
@@ -49,19 +49,19 @@ class TV:
         return self._estado
     
     def canalUp(self):
-        if self._estado and 0<self._canal<121:
+        if self._estado and 1<=self._canal<=120:
             self._canal+=1
 
     def canalDown(self):
-        if self._estado and 0<self._canal<121:
+        if self._estado and 1<=self._canal<=120:
             self._canal-=1
 
     def volumenUp(self):
-        if self._estado and 0<self.volumen<8:
+        if self._estado and 0<self._volumen<=7:
             self._volumen +=1
     
     def volumenDown(self):
-        if self._estado and 0<self.volumen<8:
+        if self._estado and 0<self._volumen<=7:
 	        self._volumen -=1
                 
 
